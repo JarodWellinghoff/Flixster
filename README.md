@@ -31,5 +31,5 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 <img src="https://i.imgur.com/c0EUn1T.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+I did have to start over multiple times due to a bug that would cause the app to crash everytime I ran the app. Never figured out what caused the bug, but I believe it had something to do with the API request process.
 
