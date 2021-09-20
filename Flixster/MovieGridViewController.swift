@@ -79,5 +79,18 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
         // Pass the selected object to the new view controller.
     }
     */
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	    // Find selected movie
+	    let cell = sender as! UICollectionViewCell
+	    let indexPath = collectionView.indexPath(for: cell)!
+	    let movie = results[indexPath.item]
+	    
+	    // Pass selected movie to the details veiw controller
+	    let detailsViewController = segue.destination as! MovieDetailsViewController
+	    detailsViewController.movie = movie
+	    
+	    // Deselect item after segue
+		collectionView.deselectItem(at: indexPath, animated: true)
+	}
 
 }
